@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/style.css">
+    <script src="../js/main.js" type="module"></script>
+    <title>To Do List</title>
+</head>
+<body>
+    <main>
+        <!-- section one start -->
+        <section class="itemEntry">
+            <form id="itemEntryForm">
+                <label for="newItem">Add Item To your list</label>
+                <div class="inputButton">
+                    <input id="newItem" type="text" placeholder="Add Item" size="40" autocomplete="off" tabindex="0">
+                    <button id="addItem" title="Add Item" class="btn1" tabindex="0">+</button>
+                </div>
+            </form>
+        </section>
+        <!-- section one end -->
+        <!-- section two start -->
+        <section class="itemClear">
+            <div class="titleButton">
+                <h1>To Do List</h1>
+                 <button id="clearItems" tabindex="0" type="button" title="search your list" class="btn2">Clear</button>
+            </div>
+            <hr>
+            <div id="listItems">
+                <!-- <div class="item">
+                    <input type="checkbox" id="1" tabindex="0">
+                    <label for="1">Eat</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="2" tabindex="0">
+                    <label for="2">Sleep</label>
+                </div>
+                 <div class="item">
+                    <input type="checkbox" id="3">
+                    <label for="3">Code</label>
+                </div> -->
+            </div>
+        </section>
+        <!-- section two end -->
+    </main>
+</body>
+</html>

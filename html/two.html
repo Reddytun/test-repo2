@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test2</title>
+</head>
+<body>
+    <h1>The Number Game  sdfdssdsdfsdf test</h1>
+    <div>
+        <span id="firstNum"></span>
+        <span id="secondNum"></span>
+    </div>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtrast</button>
+    <button onclick="multi()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <div>
+        <p id="result"></p>
+        <h4 id="end"></h4>
+    </div>
+</body>
+<script>
+    let num1 = 100;
+    let num2 = 12;
+    document.getElementById("firstNum").textContent= num1;
+    document.getElementById("secondNum").textContent= num2;
+
+    let sum = document.getElementById("result");
+    let end = document.getElementById("end");
+
+    function add() {
+        let result= num1 + num2;
+        sum = "The result is: " + result;
+        console.log(sum);
+        end.textContent = sum;
+    }
+
+    function sub() {
+        let result = num1 - num2;
+        sum = "The sub value is: " + result;
+        console.log(sum);
+        end.textContent = sum;
+    }
+
+    function multi() {
+        let result = num1 * num2;
+        sum = "The Multiply value is: " + result;
+        console.log(sum);
+        end.textContent = sum;  
+    }
+
+    function divide() {
+        let result = num1 / num2 ;
+        sum = "The divide value is: " + result;
+        console.log(sum);
+        end.textContent = sum;
+    }
+</script>
+</html>

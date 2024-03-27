@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting Data</title>
+    <link rel="stylesheet" href="../css/test.css">
+</head>
+<body>
+    <h1>Counting People</h1>
+    <h3>Number of People</h3>
+    <div>
+        <h4 id="count"></h4>
+    </div>
+    <div class="butto">
+        <button id="btn" onclick="increment()">INCREMENT</button>
+    </div>
+    <div class="butto">
+        <button id="saveBtn" onclick="save()">SAVE</button>
+    </div>
+    <p>The save Number</p>
+    <p id="para"></p>
+</body>
+<script>
+    let countNumber = 0;
+    let count = document.getElementById("count");
+    
+    function increment() {
+        countNumber += + 1;
+        count.textContent = countNumber;
+    }
+    increment();
+
+    function save() {
+        let countStr = countNumber + " -";
+        let para = document.getElementById("para");
+        para.textContent += countStr;
+        countNumber = 0;
+        count.textContent = 0;
+    }
+    save();
+</script>
+</html> 

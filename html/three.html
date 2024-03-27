@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test3</title>
+</head>
+<body>
+    <h2>The Blackjack Game test</h2>
+    <div>
+        <span>The Value one is : </span>
+        <span id="num1"></span>
+    </div>
+    <div>
+        <span>The Value two is : </span>
+        <span id="num2"></span>
+    </div>
+    <button onclick="btn()">add</button>
+    <h4 id="result">The result is: </h4>
+</body>
+<script>
+    let one = 101;
+    let two = 11;
+    document.getElementById("num1").textContent = one;
+    document.getElementById("num2").textContent = two;
+    let result = document.getElementById("result");
+    let sum = one + two;
+    function btn() {
+        if( sum < 21) {
+        result.textContent ="Would you like to draw new card?";
+        } else if ( sum === 21) {
+        result.textContent ="Wow, You've won the blackjack!!";
+        } else {
+        result.textContent = "You're out of the game!!";
+        }
+    }
+    
+</script>
+</html>

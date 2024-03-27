@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four</title>
+    <link rel="stylesheet" href="../css/four.css">
+</head>
+<body>
+    <h1>This is test Four</h1>
+    <input type="text" id="input-el" placeholder="Your Extension...">
+    <button id="btn">Save</button>
+    <button id="tab-el">Save Tab</button>
+    <button id="btn-el">DELETE ALL</button>
+    <div>
+        <ul id="ul-el"></ul>
+    </div>
+</body>
+<script>
+    let mylead = [];
+   const input = document.getElementById("input-el");
+   const button = document.getElementById("btn");
+   const ulEl = document.getElementById("ul-el");
+   const tabBtn = document.getElementById("tab-el");
+   const delBtn = document.getElementById("btn-el");
+   const leadLocalStorage = JSON.parse(localStorage.getItem(mylead));
+
+   if (leadLocalStorage) {
+    mylead = leadLocalStorage;
+    render(mylead);
+   };
+
+   function render(lead) {
+    let listItem = [];
+   for ( let i = 0; i < lead.length ; i++) {
+    listItem += `<li>
+        <a target='_blank' href= ${lead[i]}>${lead[i]}</a>
+        </li>`
+   };
+   ulEl.innerHTML = listItem;
+    };
+
+    const tab = [{URL:"https://chat.openai.com/c/2fe2e7bd-f1cf-44a1-8451-c13a200538f9"}];
+
+    tabBtn.addEventListener("click", function() {
+        mylead.push(tab[0].URL);
+        localStorage.setItem("mylead", JSON.stringify(mylead));
+        render(mylead);
+    })
+
+   button.addEventListener("click", function() {
+    mylead.push(input.value);
+    input.value = "";
+    localStorage.setItem("mylead",JSON.stringify(mylead));
+    render(mylead);
+   });
+
+   delBtn.addEventListener("click", function() {
+    localStorage.clear;
+    mylead =[];
+    render(mylead);
+   });
+
+   
+  
+
+</script>
+</html>
